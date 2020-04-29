@@ -21,8 +21,9 @@ imgargs vmlinuz splash=off console=tty1 LM=3
 boot || goto custom_exit
 
 :load_thinstation_2
-kernel https://boot.netboot.xyz/memdisk raw iso
-initrd https://sourceforge.net/projects/thinstation/files/LiveCD/TS-Multiclient-Desktop-LiveCD-Demo.iso
+kernel https://p0xnet.net/thinstation/vmlinuz
+initrd https://p0xnet.net/thinstation/initrd
+imgargs vmlinuz
 boot || goto custom_exit
 
 :custom_exit
