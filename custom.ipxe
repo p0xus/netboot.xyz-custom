@@ -7,16 +7,15 @@
 clear custom_choice
 menu p0xnet selection menu
 item --gap This is the first sub menu
-item option_one ${space} Load ISO
+item load_thinstation ${space} Load Thinstation
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
 goto custom_exit
 
-:option_one
-kernel https://p0xnet.net/thinstation/vmlinuz
+:load_thinstation
+kernel https://p0xnet.net/thinstation/vmlinuz splash=off console=tty1 LM=3
 initrd https://p0xnet.net/thinstation/initrd
-imgargs vmlinuz splash=off console=tty1 LM=3
 boot || goto custom_exit
 
 :custom_exit
