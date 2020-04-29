@@ -9,6 +9,8 @@ menu p0xnet bootloader
 item --gap Thinstation tests
 item load_thinstation_1 ${space} Load Thinstation 1
 item load_thinstation_2 ${space} Load Thinstation 2
+item --gap Other
+item load_other_1 ${space} Load RogueScholar
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
@@ -25,6 +27,9 @@ kernel https://p0xnet.net/thinstation/vmlinuz
 initrd https://p0xnet.net/thinstation/initrd
 imgargs vmlinuz
 boot || goto custom_exit
+
+:load_other_1
+chain RogueScholarsCustom.ipxe
 
 :custom_exit
 exit
