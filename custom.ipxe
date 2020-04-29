@@ -27,5 +27,4 @@ imgargs initrd splash=off console=tty1 LM=3
 boot || goto custom_exit
 
 :custom_exit
-chain menu.ipxe
 exit
