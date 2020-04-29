@@ -6,7 +6,7 @@
 :custom
 clear custom_choice
 menu p0xnet selection menu
-item --gap This is the first sub menu
+item --gap Thinstation tests
 item load_thinstation ${space} Load Thinstation
 choose custom_choice || goto custom_exit
 echo ${cls}
