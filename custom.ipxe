@@ -14,8 +14,9 @@ goto ${custom_choice}
 goto custom_exit
 
 :load_thinstation
-kernel https://p0xnet.net/thinstation/vmlinuz splash=off console=tty1 LM=3
+kernel https://p0xnet.net/thinstation/vmlinuz
 initrd https://p0xnet.net/thinstation/initrd
+imgargs vmlinuz splash=off console=tty1 LM=3
 boot || goto custom_exit
 
 :custom_exit
